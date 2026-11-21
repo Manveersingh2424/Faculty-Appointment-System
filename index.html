@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Faculty Appointment System</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#booking">Book Appointment</a>
+            <a href="#appointments">My Appointments</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Lovely Professional University</h1>
+            <h2>Faculty Appointment & Scheduling System</h2>
+            <p>Book an appointment with your faculty member according to their available time.</p>
+            <a href="#booking" class="btn">Book Appointment</a>
+        </div>
+    </section>
+
+    <section class="section" id="faculty">
+        <h2>Faculty Directory</h2>
+        <p class="small-text">Department: Computer Science Engineering</p>
+
+        <div class="faculty-container">
+            <div class="faculty-card">
+                <div class="faculty-img">CS</div>
+                <h3>Dr. Chirag Sharma</h3>
+                <p><b>Department:</b></p>
+                <p>Computer Science Engineering</p>
+                <p><b>Subject:</b> Internet Programming</p>
+                <p class="available">Available: Monday - Friday</p>
+                <button onclick="selectFaculty('Dr. Chirag Sharma', 'Internet Programming')">Book Appointment</button>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img">MC</div>
+                <h3>Minu Choudhary</h3>
+                <p><b>Department:</b></p>
+                <p>Computer Science Engineering</p>
+                <p><b>Subject:</b> Python</p>
+                <p class="available">Available: Monday - Friday</p>
+                <button onclick="selectFaculty('Minu Choudhary', 'Python')">Book Appointment</button>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img">AK</div>
+                <h3>Dr. Akash Kumar</h3>
+                <p><b>Department:</b></p>
+                <p>Computer Science Engineering</p>
+                <p><b>Subject:</b> Engineering Mathematics</p>
+                <p class="available">Available: Monday - Friday</p>
+                <button onclick="selectFaculty('Dr. Akash Kumar', 'Engineering Mathematics')">Book Appointment</button>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img">KN</div>
+                <h3>Kedar Nath Singh</h3>
+                <p><b>Department:</b></p>
+                <p>Computer Science Engineering</p>
+                <p><b>Subject:</b> Design Thinking</p>
+                <p class="available">Available: Monday - Friday</p>
+                <button onclick="selectFaculty('Kedar Nath Singh', 'Design Thinking')">Book Appointment</button>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-img">KH</div>
+                <h3>Karun Handa</h3>
+                <p><b>Department:</b></p>
+                <p>Computer Science Engineering</p>
+                <p><b>Subject:</b> Orienting to Computing</p>
+                <p class="available">Available: Monday - Friday</p>
+                <button onclick="selectFaculty('Karun Handa', 'Orienting to Computing')">Book Appointment</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section booking" id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <label>Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter your name" required>
+
+            <label>Student Registration Number</label>
+            <input type="text" id="RegistrationNumber" placeholder="Enter registration number" required>
+
+            <label>Select Faculty</label>
+            <select id="facultyName" required>
+                <option value="">Select Faculty</option>
+                <option value="Dr. Chirag Sharma">Dr. Chirag Sharma</option>
+                <option value="Minu Choudhary">Minu Choudhary</option>
+                <option value="Dr. Akash Kumar">Dr. Akash Kumar</option>
+                <option value="Kedar Nath Singh">Kedar Nath Singh</option>
+                <option value="Karun Handa">Karun Handa</option>
+            </select>
+
+            <label>Subject</label>
+            <select id="subject" required>
+                <option value="">Select Subject</option>
+                <option value="Internet Programming">Internet Programming</option>
+                <option value="Python">Python</option>
+                <option value="Engineering Mathematics">Engineering Mathematics</option>
+                <option value="Design Thinking">Design Thinking</option>
+                <option value="Orienting to Computing">Orienting to Computing</option>
+            </select>
+
+            <label>Appointment Date</label>
+            <input type="date" id="appointmentDate" required>
+
+            <label>Appointment Time</label>
+            <select id="appointmentTime" required>
+                <option value="">Select Time</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+            </select>
+
+            <label>Reason for Appointment</label>
+            <textarea id="reason" placeholder="Enter the reason for your appointment" required></textarea>
+
+            <button type="submit" class="submit-btn">Book Appointment</button>
+        </form>
+    </section>
+
+    <section class="section" id="appointments">
+        <h2>My Appointments</h2>
+        <div id="appointmentList">
+            <p class="no-appointment">No appointments booked yet.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Computer Science Engineering Department</p>
+        <p>Faculty Appointment & Scheduling System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
